@@ -1,0 +1,61 @@
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
+
+
+    <div class="container">
+      <!-- Example row of columns -->
+
+
+    <div class="row animated bounceInLeft">
+
+		<div class="col-md-4 formulario">
+    <img src="hipsterlogogenerator.png" class="animated bounceInLeft" height="165" width="200">
+          	<h2 style="color:#FFF">Que musica te gusta? </h2>
+          	<p style="color:#FFF"> Escribe 5 artistas que te gusten actualmente </p>
+
+            <button ng-click="iniciarSesion()" >Incio sesion </button>
+			<form name="form" ng-submit="checkArtists()" class="navbar-form navbar-right" role="form">
+				<div class="col-sm-12 col-md-6 col-md-offset-2">
+					<div class="form-group formulario datos">
+						<input name="artist1" ng-model="artists.artist1" type="text" placeholder="Artist" class="form-control art">
+						<input name="artist2" ng-model="artists.artist2" type="text" placeholder="Artist" class="form-control">
+						<input name="artist3" ng-model="artists.artist3" type="text" placeholder="Artist" class="form-control">
+						<input name="artist4" ng-model="artists.artist4" type="text" placeholder="Artist" class="form-control">
+						<input name="artist5"  ng-model="artists.artist5" type="text" placeholder="Artist" class="form-control">
+						<button type="submit" class="btn btn-success">Create Playlist</button>
+					</div>
+          <!-- No idea what this does but it needs to be here -->
+				</div>
+
+        <div ng-repeat="artist in artToFind">
+                      <div ng-init="getSong(artist)">
+                      </div>
+        </div>
+
+    	</form>
+		    </div>
+        <div id="divplaylist"class="col-sm-12 col-md-6 col-md-offset-1 ">
+                  <!-- Artist List -->
+          <div id="artists-list" class="row">
+              <div class="col-md-8">
+              <br/>
+
+              <iframe id="spotify-iframe" width="640px" height="580px" frameborder="0" allowtransparency="true"></iframe>
+<!--<iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:5Z7ygHQo02SUrFmcgpwsKW,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" frameborder="0" allowtransparency="true"></iframe> -->
+                  <!-- LOOP OVER THE ARTISTS IN $scope.artists   -->
+                  <div ng-repeat="artist in artists">
+                      <div ng-init="getSong(artist)">
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+        </div>
+		</div>
+
+
+      <footer>
+        <div id="footer">
+        </div>
+      </footer>
+		<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>

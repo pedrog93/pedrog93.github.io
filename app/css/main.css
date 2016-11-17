@@ -1,0 +1,62 @@
+html , body{
+	width:100%;
+	position:relative;
+	font-family: 'Raleway', serif;
+}
+
+
+body{
+
+	background-image: url('projecto-musica-sisadap.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	background-repeat: no-repeat;
+	max-height: auto;
+	max-width: 100%;
+}
+
+input{
+	display: block;
+	margin:10px;
+	text-align: center;
+
+
+}
+h2{
+	font-size: 35px;
+}
+art {
+	width: 200px;
+}
+#divplaylist {
+
+
+}
+#redes {
+	display: inline;
+}
+
+.formulario{
+	text-align: center;
+}
+
+.formulario .datos input{
+	text-align: center;
+}
+
+img{
+	position: relative;
+	margin-left: -20px;
+	margin-top: -33px;
+}
+
+#footer{
+	text-align: center;
+	color: white;
+}
+
+strong{
+	font-size: 60px;
+}
