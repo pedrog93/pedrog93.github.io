@@ -29,9 +29,14 @@
 
         <div ng-repeat="artist in artToFind">
                       <div ng-init="getSong(artist)">
-                      </div>
-        </div>
 
+                      </div>
+
+        </div>
+        <div ng-repeat="artist in artToFind">
+          <div ng-init="getRecomended(artist)">
+          </div>
+        </div>
     	</form>
 		    </div>
         <div id="divplaylist"class="col-sm-12 col-md-6 col-md-offset-1 ">
@@ -43,12 +48,7 @@
               <iframe id="spotify-iframe" width="640px" height="580px" frameborder="0" allowtransparency="true"></iframe>
 <!--<iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:5Z7ygHQo02SUrFmcgpwsKW,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" frameborder="0" allowtransparency="true"></iframe> -->
                   <!-- LOOP OVER THE ARTISTS IN $scope.artists   -->
-                  <div ng-repeat="artist in artists">
-                      <div ng-init="getSong(artist)">
-                      </div>
-                  </div>
 
-              </div>
           </div>
         </div>
 		</div>
